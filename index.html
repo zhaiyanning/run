@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>训练 - RunLife | 跑者视界</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts: Merriweather (衬线体/杂志风) 和 Roboto (正文) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 全局字体配置：模仿 Runner's World 风格 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #121212;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+        }
+        /* 分类标签样式 */
+        .category-tag {
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #d22030; /* Runner's World 经典红 */
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        /* 文章标题 hover 效果 */
+        .article-title:hover {
+            color: #444;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #d22030;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. 顶栏导航 (简约黑白风) -->
+    <header class="border-b border-gray-200 sticky top-0 bg-white z-50">
+        <!-- 顶部工具条 -->
+        <div class="bg-black text-white text-xs py-2 px-4 hidden md:block text-center font-bold tracking-wider">
+            订阅 RunLife+ 会员，解锁专家级训练计划
+        </div>
+        
+        <!-- 导航主区域 -->
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <!-- 汉堡菜单 (Mobile) -->
+            <div class="md:hidden text-2xl cursor-pointer">☰</div>
+
+            <!-- Logo -->
+            <div class="text-3xl font-black italic tracking-tighter mx-auto md:mx-0" style="font-family: 'Roboto', sans-serif;">
+                RUN<span class="text-red-600">LIFE</span>
+            </div>
+
+            <!-- 桌面导航链接 -->
+            <nav class="hidden md:flex space-x-8 font-bold text-sm tracking-wide uppercase text-gray-800">
+                <a href="#" class="hover:text-red-600 border-b-2 border-transparent hover:border-red-600 py-6">训练</a>
+                <a href="#" class="hover:text-red-600 border-b-2 border-transparent hover:border-red-600 py-6">鞋评</a>
+                <a href="#" class="hover:text-red-600 border-b-2 border-transparent hover:border-red-600 py-6">营养</a>
+                <a href="#" class="hover:text-red-600 border-b-2 border-transparent hover:border-red-600 py-6">新手入门</a>
+            </nav>
+
+            <!-- 右侧功能区 -->
+            <div class="hidden md:flex items-center space-x-4 text-sm font-bold">
+                <button class="border border-gray-900 px-4 py-2 hover:bg-gray-900 hover:text-white transition">登录</button>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. 版块标题 (Header Title) -->
+    <div class="max-w-6xl mx-auto px-4 py-8 md:py-12 text-center md:text-left border-b border-gray-100">
+        <h1 class="text-5xl md:text-6xl font-black uppercase tracking-tight mb-4" style="font-family: 'Roboto', sans-serif;">训练中心</h1>
+        <p class="text-gray-600 text-lg max-w-2xl leading-relaxed">
+            无论你的目标是完成第一次5公里跑，还是想获得波士顿马拉松的资格，RunLife都能提供科学的建议、训练计划和工具。
+        </p>
+    </div>
+
+    <!-- 3. 焦点图 (Hero Section) - 模仿头条文章布局 -->
+    <section class="max-w-6xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- 图片区域 -->
+            <div class="lg:col-span-8 relative group cursor-pointer">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552674605-46952317061e?q=80&w=2070&auto=format&fit=crop" alt="Marathon Training" class="w-full h-[400px] object-cover transform group-hover:scale-105 transition duration-700 ease-in-out">
+                </div>
+            </div>
+            <!-- 文字区域 -->
+            <div class="lg:col-span-4 flex flex-col justify-center h-full border-t lg:border-t-0 lg:border-l border-gray-200 lg:pl-8 pt-6 lg:pt-0">
+                <span class="category-tag">Marathon Prep</span>
+                <h2 class="article-title text-3xl font-bold leading-tight mb-4 cursor-pointer">
+                    为什么每一次长距离拉练都应该是一次模拟考？
+                </h2>
+                <p class="text-gray-600 mb-4 font-sans text-base leading-relaxed">
+                    不仅是跑距离，更是要测试你的补给策略、配速节奏以及那双你准备比赛穿的碳板跑鞋。
+                </p>
+                <div class="text-xs text-gray-400 uppercase font-bold mt-2">By <span class="text-gray-900">Coach Liu</span> &bull; Nov 25, 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 工具栏 (Tool Widget) - 嵌入式设计 -->
+    <div class="bg-gray-100 py-12 my-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- 工具：配速计算器 -->
+                <div class="w-full md:w-1/3 bg-white p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold mb-1 uppercase text-gray-900" style="font-family: 'Roboto', sans-serif;">配速计算器</h3>
+                    <p class="text-xs text-gray-500 mb-4">输入距离与目标时间，获取你的平均配速</p>
+                    
+                    <div class="space-y-3 font-sans">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="text-xs font-bold uppercase text-gray-500">距离 (KM)</label>
+                                <input type="number" id="dist" value="10" class="w-full border border-gray-300 p-2 text-sm font-bold text-gray-900 focus:border-black outline-none mt-1">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold uppercase text-gray-500">时间 (MIN)</label>
+                                <input type="number" id="time" value="55" class="w-full border border-gray-300 p-2 text-sm font-bold text-gray-900 focus:border-black outline-none mt-1">
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculatePace()" class="w-full bg-black text-white uppercase font-bold text-sm py-3 hover:bg-red-600 transition duration-300 mt-2">
+                            计算配速
+                        </button>
+
+                        <div id="result-box" class="hidden bg-gray-50 p-3 mt-2 border border-gray-200 text-center">
+                            <span class="text-xs text-gray-500 uppercase block mb-1">所需配速</span>
+                            <span id="paceVal" class="text-3xl font-bold font-serif text-red-600">5:30</span> <span class="text-sm text-gray-500">/km</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 推广：训练计划 -->
+                <div class="w-full md:w-2/3 flex flex-col justify-center">
+                    <span class="category-tag">Training Plans</span>
+                    <h3 class="text-3xl font-bold mb-4">不知道今天怎么练？</h3>
+                    <p class="text-gray-600 mb-6 max-w-lg">我们与精英教练合作设计的周期性计划，适合从沙发土豆到波马大神的每一个阶段。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="border-b-2 border-black pb-1 font-bold uppercase text-sm hover:text-red-600 hover:border-red-600 transition">5K 新手计划</a>
+                        <a href="#" class="border-b-2 border-black pb-1 font-bold uppercase text-sm hover:text-red-600 hover:border-red-600 transition">10K 进阶</a>
+                        <a href="#" class="border-b-2 border-black pb-1 font-bold uppercase text-sm hover:text-red-600 hover:border-red-600 transition">半程马拉松</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. 推荐阅读网格 (Editorial Grid) -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="flex items-center justify-between mb-8 border-b border-black pb-2">
+            <h3 class="text-2xl font-black uppercase" style="font-family: 'Roboto', sans-serif;">最新资讯</h3>
+            <a href="#" class="text-xs font-bold uppercase underline">查看更多</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+            <!-- Article Card 1: Nutrition -->
+            <article class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 relative h-52">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <span class="category-tag">Nutrition</span>
+                <h3 class="text-xl font-bold mb-2 font-serif leading-snug group-hover:text-gray-600 transition">跑后奶昔：你需要补充的不仅仅是蛋白质</h3>
+                <p class="text-gray-600 text-sm mb-3 font-sans line-clamp-2">许多跑者忽视了微量元素在恢复期的作用，这里有一份详细的食材清单。</p>
+            </article>
+
+            <!-- Article Card 2: Gear -->
+            <article class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 relative h-52">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <span class="category-tag">Gear Review</span>
+                <h3 class="text-xl font-bold mb-2 font-serif leading-snug group-hover:text-gray-600 transition">实测: 2025年最好的碳板竞速鞋 TOP 5</h3>
+                <p class="text-gray-600 text-sm mb-3 font-sans line-clamp-2">价格并不代表一切，我们对 Nike, Adidas, Hoka 进行了长达300公里的测试。</p>
+            </article>
+
+            <!-- Article Card 3: Health -->
+            <article class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 relative h-52">
+                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <span class="category-tag">Injury Prevention</span>
+                <h3 class="text-xl font-bold mb-2 font-serif leading-snug group-hover:text-gray-600 transition">跑步膝不是终点：4个动作强化你的股四头肌</h3>
+                <p class="text-gray-600 text-sm mb-3 font-sans line-clamp-2">只要力量到位，膝盖问题大多可以避免。专业物理治疗师给出的建议。</p>
+            </article>
+            
+            <!-- Article Card 4: Community -->
+            <article class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 relative h-52">
+                    <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <span class="category-tag">Voices</span>
+                <h3 class="text-xl font-bold mb-2 font-serif leading-snug group-hover:text-gray-600 transition">我是如何在繁忙工作中坚持月跑200公里的</h3>
+                <p class="text-gray-600 text-sm mb-3 font-sans line-clamp-2">即使是朝九晚五的上班族，利用晨跑也能改变人生。</p>
+            </article>
+
+             <!-- Article Card 5: Strength -->
+            <article class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 relative h-52">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <span class="category-tag">Workouts</span>
+                <h3 class="text-xl font-bold mb-2 font-serif leading-snug group-hover:text-gray-600 transition">为什么举铁不会让你变慢，反而更快</h3>
+                <p class="text-gray-600 text-sm mb-3 font-sans line-clamp-2">这是所有耐力运动员都应该做的三个复合动作。</p>
+            </article>
+            
+             <!-- Advertisement Slot (模拟广告位) -->
+             <div class="flex flex-col items-center justify-center bg-gray-100 border border-gray-200 h-full min-h-[300px] text-center p-4">
+                <span class="text-xs text-gray-400 uppercase mb-2">Advertisement</span>
+                <h4 class="font-bold text-lg">订阅 RunLife 电子报</h4>
+                <p class="text-sm text-gray-500 my-2">每周一早晨，最新资讯直达邮箱。</p>
+                <div class="flex mt-2 w-full">
+                    <input type="email" placeholder="Your Email" class="bg-white border border-gray-300 px-2 py-1 text-sm w-full outline-none">
+                    <button class="bg-red-600 text-white text-xs px-3 uppercase font-bold hover:bg-red-700">GO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 装备购物清单 (Gear Picks) - 电商推荐 -->
+    <div class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+             <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-red-600 pl-4" style="font-family: 'Roboto', sans-serif;">本周装备精选</h3>
+             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                 <!-- Item 1 -->
+                 <div class="bg-white text-black p-2">
+                     <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1964&auto=format&fit=crop" class="w-full h-48 object-cover mb-3">
+                     <p class="text-xs font-bold text-red-600 uppercase">BEST DEAL</p>
+                     <h4 class="font-bold text-sm leading-tight">Nike Pegasus 41</h4>
+                     <span class="text-sm text-gray-500 block mt-1">$130.00</span>
+                 </div>
+                 <!-- Item 2 -->
+                 <div class="bg-white text-black p-2">
+                     <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop" class="w-full h-48 object-cover mb-3">
+                     <p class="text-xs font-bold text-gray-500 uppercase">ACCESSORY</p>
+                     <h4 class="font-bold text-sm leading-tight">Garmin Fenix 7</h4>
+                     <span class="text-sm text-gray-500 block mt-1">$699.00</span>
+                 </div>
+                 <!-- Item 3 -->
+                 <div class="bg-white text-black p-2">
+                     <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1974&auto=format&fit=crop" class="w-full h-48 object-cover mb-3">
+                     <p class="text-xs font-bold text-gray-500 uppercase">SHOES</p>
+                     <h4 class="font-bold text-sm leading-tight">Saucony Endorphin</h4>
+                     <span class="text-sm text-gray-500 block mt-1">$160.00</span>
+                 </div>
+                  <!-- Item 4 -->
+                  <div class="bg-white text-black p-2 flex flex-col justify-center items-center text-center h-full border border-dashed border-gray-400 cursor-pointer hover:bg-gray-100 transition">
+                    <span class="text-4xl text-gray-300">+</span>
+                    <span class="font-bold text-sm mt-2">查看所有评测</span>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- Footer (底部) -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-8 text-center">
+        <div class="text-3xl font-black italic tracking-tighter mb-6" style="font-family: 'Roboto', sans-serif;">
+            RUN<span class="text-red-600">LIFE</span>
+        </div>
+        <div class="flex justify-center space-x-6 mb-8 text-sm font-bold uppercase text-gray-500">
+            <a href="#" class="hover:text-black">关于我们</a>
+            <a href="#" class="hover:text-black">广告合作</a>
+            <a href="#" class="hover:text-black">订阅服务</a>
+            <a href="#" class="hover:text-black">隐私条款</a>
+        </div>
+        <p class="text-xs text-gray-400 font-sans">© 2025 RunLife Media, Inc. A hypothetical running partner.</p>
+    </footer>
+
+    <!-- JS Script (Calculator) -->
+    <script>
+        function calculatePace() {
+            const dist = parseFloat(document.getElementById('dist').value);
+            const time = parseFloat(document.getElementById('time').value);
+            const paceVal = document.getElementById('paceVal');
+            const resultBox = document.getElementById('result-box');
+
+            if (dist > 0 && time > 0) {
+                const totalMinutes = time;
+                const minutesPerKm = totalMinutes / dist;
+                
+                const paceMin = Math.floor(minutesPerKm);
+                const paceSec = Math.round((minutesPerKm - paceMin) * 60);
+                // Format padding
+                const paceSecStr = paceSec < 10 ? '0' + paceSec : paceSec;
+                
+                paceVal.textContent = `${paceMin}:${paceSecStr}`;
+                resultBox.classList.remove('hidden');
+            } else {
+                alert("请输入有效的数字！");
+            }
+        }
+    </script>
+</body>
+</html>
